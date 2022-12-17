@@ -1,0 +1,32 @@
+/*Given a list of N elements, which follows no particular arrangement, you are 
+required to search an element x in the list. The list is stored using array data 
+structure. If the search is successful, the output should be the index at which the 
+element occurs, otherwise returns -1 to indicate that the element is not present in 
+the list. Assume that the elements of the list are all distinct. Write a program to 
+perform the desired task */
+#include <iostream>
+using namespace std;
+int searchElement(int arr[], int n, int key){
+ int flag = -1;
+ for(int i=0; i<n; i++){
+ if(key == arr[i]){
+ flag = i;
+ }
+ }
+ return flag;
+}
+int main() {
+ int n,key;
+ cout<<"Enter the number of elements you want in list : ";
+ cin>>n;
+ int arr[n];
+ for(int i=0; i<n; i++){
+ cout<<"Enter : ";
+ cin>>arr[i];
+ }
+ cout<<"Enter the element to Search for : ";
+ cin>>key;
+ cout<<"Element found at index : "<<searchElement(arr, 
+n,key)<<endl;
+ return 0;
+}
